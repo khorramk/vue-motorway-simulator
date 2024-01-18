@@ -1,14 +1,19 @@
 <template>
-    <div class="lane-marker"></div>
+    <div class="lane-marker" :style="`border-style: ${laneType}; left: ${markPosition}`"></div>
 </template>
+
+
+<script lang="ts" setup>
+const {laneType, markPosition} = defineProps(['laneType', 'markPosition'])
+</script>
 
 <style scoped>
 .lane-marker {
     left: 1rem;
     position: absolute;
-      width: 5px;
       height: 100vh;
-      background-color: #fff;
+      border-color: #fff;
+      border-width: 2px;
       
        /* border: 1px solid white; */
       /* left: 50%; */

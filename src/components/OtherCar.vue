@@ -1,5 +1,5 @@
 <template>
-        <div class="car" :data-speed="carSpeed" :style="`bottom: ${carPositionY}%; background: ${carColor} `">
+        <div class="car" :data-speed="carSpeed" :style="`${direction}: ${carPositionY}%; background: ${carColor}`" :class="carBody">
           <div class="wheel"></div>
           <div class="wheel" style="right: 0px;"></div>
           <div class="wheel" style="bottom: 0px;"></div>
@@ -9,7 +9,7 @@
 
 <script lang="ts" setup>
 import {  onMounted, ref } from 'vue';
-   const {speed, carColor, carPositionHorizontal} = defineProps(['speed', 'carColor', 'carPositionHorizontal'])
+   const {speed, carColor, carPositionHorizontal, direction, carBody} = defineProps(['speed', 'carColor', 'carPositionHorizontal', 'direction', 'carBody'])
    const carPositionY = ref(carPositionHorizontal);
    const carSpeed = ref(speed)// 20mph;
   
