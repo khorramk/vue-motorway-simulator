@@ -9,8 +9,8 @@
 
 <script lang="ts" setup>
 import {  onMounted, ref } from 'vue';
-   const {speed, carColor} = defineProps(['speed', 'carColor'])
-   const carPositionY = ref(0);
+   const {speed, carColor, carPositionHorizontal} = defineProps(['speed', 'carColor', 'carPositionHorizontal'])
+   const carPositionY = ref(carPositionHorizontal);
    const carSpeed = ref(speed)// 20mph;
   
    const updatePosition = () => {
@@ -21,7 +21,7 @@ import {  onMounted, ref } from 'vue';
           carPositionY.value = -20;
      }
 
-     setTimeout(updatePosition, 60)
+     setTimeout(updatePosition, 20)
    }
 
   onMounted(() => {
