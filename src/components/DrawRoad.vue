@@ -5,6 +5,7 @@
     <OtherCar :speed="2" :car-color="'purple'" :car-position-horizontal="60" direction="bottom"></OtherCar>
     <OtherCar :speed="2" :car-color="'blue'" :car-position-horizontal="80" direction="bottom"></OtherCar>
     <LaneMarker lane-type="dashed" mark-position="30%"></LaneMarker>
+    <PlayerCar car-color="green"></PlayerCar>
     <LaneMarker lane-type="dashed" mark-position="70%"></LaneMarker>
 
   </RoadWay>
@@ -23,6 +24,7 @@
 import RoadWay from './RoadWay.vue'
 import LaneMarker from './LaneMarker.vue'
 import OtherCar from './OtherCar.vue'
+import PlayerCar from './PlayerCar.vue';
 </script>
 
 <style>
